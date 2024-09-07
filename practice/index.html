@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crypto Price Prediction</title>
+</head>
+<body>
+    <h1>Crypto Price Prediction</h1>
+    <form method="POST" action="/">
+        <label for="prediction_days">Prediction Days:</label>
+        <input type="number" id="prediction_days" name="prediction_days" min="1" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if plot_path %}
+        <h2>Predicted Prices</h2>
+        <img src="{{ plot_path }}" alt="Price Prediction Plot">
+    {% endif %}
+</body>
+</html>
